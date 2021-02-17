@@ -45,11 +45,12 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box (provisioner) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Whitelisted IP Address:
+- 76.172.68.15 (personal Public IP address)
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by accessing the DVWA containers in the *Jumpbox-Provisioner* Virutal Machine.
+- The only machines that can access the ELK server are personal machine (Public IP-76.172.68.15), and the Jumpbox-Provisioner VM (Public IP-20.51.104.158) through a peering connection
 
 A summary of the access policies in place can be found in the table below.
 
