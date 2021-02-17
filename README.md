@@ -74,22 +74,26 @@ The playbook implements the following tasks:
 - Create playbook to install container with docker and Filebeat and Metricbeat.
 - Run playbook to launch the container
 
-The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
-
-**Note**: The following image link needs to be updated. Replace `docker_ps_output.png` with the name of your screenshot image file.  
-
+The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance. 
 
 ![docker ps -a](Images/elkserver_docker.png)
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web-1 (Private IP: 10.0.0.10)
+- Web-2 (Private IP: 10.0.0.11)
+- Web-3 (Private IP: 10.0.0.12)
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- Filebeat
+- Metricbeat
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. When Filebeat starts logging, it will represent data such as system log events in a dashboard:
+! [filebeat](Images/filebeat_ss.png)
+
+- Metricbeat periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. Metricbeat will display information such as container CPU usage as follows:
+! [metricbeat](Images/metricbeat_ss.png)
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
