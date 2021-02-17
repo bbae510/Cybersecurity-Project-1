@@ -6,9 +6,12 @@ The files in this repository were used to configure the network depicted below.
 
 ![network diagram](Diagrams/Cloud_Security(azure).png)
 
-These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Images file may be used to install only certain pieces of it, such as Filebeat.
+These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the Images file may be used to install only certain pieces of it, such as Filebeat, Metricbeat, Docker, Apache.
 
-  - _https://github.com/bbae510/Cybersecurity-Project-1/blob/main/Images/filebeat_playbook.png_
+[Filebeat](Images/filebeat_playbook.png)
+[Metricbeat](Images/metricbeat_playbook.png)
+[Apache](Images/apacheinstall_playbook.png)
+[Docker](Images/dockerinstall_playbook.png)
 
 This document contains the following details:
 - Description of the Topologu
