@@ -34,7 +34,7 @@ Integrating an ELK server allows users to easily monitor the vulnerable VMs for 
 - Metricbeat is a lightweight shipper that you can install on your servers to periodically collect metrics from the operating system and from services running on the server. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
-_Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
+
 
 |         Name        | Function         | IP Address    | Operating System |
 |:-------------------:|------------------|---------------|------------------|
@@ -104,7 +104,9 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 - Go to /etc/ansible/files and use the curl command to add the config file:
+
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
+
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles.
 - Update the filebeat-config.yml file to include the ELK server private IP in lines 1106 and 1806.
 - Run the filebeat-playbook.yml playbook, and navigate to the kibana page at [ELK public IP]/app/kibana to check that the installation worked as expected.
