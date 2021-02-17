@@ -104,7 +104,7 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 
 - Go to /etc/ansible/files and use the curl command to add the config file:
-'''
+'''python
 curl https://gist.githubusercontent.com/slape/5cc350109583af6cbe577bbcc0710c93/raw/eca603b72586fbe148c11f9c87bf96a63cb25760/Filebeat > /etc/ansible/files/filebeat-config.yml
 '''
 - Copy the filebeat-playbook.yml file to /etc/ansible/roles.
